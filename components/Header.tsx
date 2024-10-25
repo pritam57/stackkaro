@@ -1,20 +1,19 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
+
 
 const Header = () => {
-  const path = usePathname();
+ 
 
   const [indexNum, setindexNum] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
 
-  useEffect(() => {
-    if (path === "/contact") {
-      setindexNum(6);
-    }
-  }, [path]);
+  const doContact =()=>{
+    setindexNum(6);
+  }
+  
 
   const links = [
     {
@@ -126,7 +125,7 @@ const Header = () => {
             </Link>
           ))}
           <Link href={"/contact"} className="p-4 text-center text-white bg-orange-500 w-full hidden md:block">
-            Contact
+            <label onClick={doContact}> Contact</label>
           </Link>
           <Link href={"/contact"} className="p-4 text-center text-white md:hidden">
             Contact
