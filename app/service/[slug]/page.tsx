@@ -1,12 +1,13 @@
-import Slug from "@/components/Slug";
+import React from 'react';
+import Slug from '@/components/Slug';
 
-interface SlugParams {
+interface Params {
   slug: string;
 }
+export default async function Page({ params }: { params: Promise<Params> }) {
+ 
+  const { slug } = await params;
 
-const slug = ({ params }: { params: SlugParams }) => {
-  const titlePromise = Promise.resolve({ slug: params.slug }); 
-  return <Slug title={titlePromise} />;
-};
-
-export default slug;
+  
+  return <Slug title={slug} />;
+}
