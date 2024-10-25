@@ -1,11 +1,12 @@
 import Slug from "@/components/Slug";
 
-
-const slug =({params}:any) =>{
-   
-    return(
-    <Slug title={params}/>
-    )
+interface SlugParams {
+  slug: string;
 }
+
+const slug = ({ params }: { params: SlugParams }) => {
+  const titlePromise = Promise.resolve({ slug: params.slug }); 
+  return <Slug title={titlePromise} />;
+};
 
 export default slug;

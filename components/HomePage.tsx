@@ -9,7 +9,12 @@ const HomePage = () => {
     const profiledata = [1, 2, 3, 4]
     const dispatch = useDispatch();
 
-    const counterdata = useSelector((state: any) => state.counterdata);
+    interface RootState {
+        counterdata: number; 
+    }
+    
+   
+    const counterdata = useSelector((state: RootState) => state.counterdata);
 
     const dothe = () => {
         dispatch(increaseFunc(counterdata))
