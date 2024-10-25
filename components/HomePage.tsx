@@ -40,7 +40,10 @@ const HomePage = () => {
 
 
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: 100, zIndex: 0 }}>
-                    <p style={{ color: "black", textAlign: "center", width: 600, fontSize: 25, fontFamily: "serif" }}>Whether you're seeking top talent, your dream job, or exceptional web services, Stackkaroo has got you covered. Explore our offerings and find what you need to achieve your goals.</p>
+                <p style={{ color: "black", textAlign: "center", width: 600, fontSize: 25, fontFamily: "serif" }}>
+  Whether you&apos;re seeking top talent, your dream job, or exceptional web services, Stackkaroo has got you covered. Explore our offerings and find what you need to achieve your goals.
+</p>
+
                 </div>
 
                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>

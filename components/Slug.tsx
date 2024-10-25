@@ -2,14 +2,14 @@
 import React, { useEffect, useState } from 'react';
 
 interface Props {
-  title: Promise<{ slug: string }>; // Keep this as Promise
+  title: Promise<{ slug: string }>; 
 }
 
 const Slug: React.FC<Props> = (props) => {
   const [slug, setSlug] = useState<string | null>(null);
 
   useEffect(() => {
-    props.title.then(data => setSlug(data.slug)); // Resolving the promise
+    props.title.then(data => setSlug(data.slug)); 
   }, [props.title]);
 
   const clrdata = { fontWeight: "bold", color: "black", margin: 20, fontSize: 25 };
